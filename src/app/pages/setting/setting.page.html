@@ -1,0 +1,104 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Setting</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <!-- Basic -->
+    <ion-accordion-group>
+        <ion-accordion>
+            <ion-item slot="header">
+                <ion-list-header>
+                    <ion-title>Camera Settings</ion-title>
+                </ion-list-header>
+            </ion-item>
+
+            <ion-list slot="content">
+                <ion-item>
+                    <ion-label color="success">Flash</ion-label>
+                    <ion-toggle checked="{{camera_flash}}" (ionChange)='set_flash()' color="success"></ion-toggle>
+
+                </ion-item>
+
+                <ion-list>
+                    <ion-list-header>
+                        <ion-label color="success">Camera Size</ion-label>
+                    </ion-list-header>
+                    <ion-radio-group name="auto" value="{{camera_size}}" (ionChange)='set_size($event)'>
+                        <ion-item>
+                            <ion-label>Narrow</ion-label>
+                            <ion-radio slot="start" color="success" value="200"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>Wide</ion-label>
+                            <ion-radio slot="start" color="success" value="{{w}}"></ion-radio>
+                        </ion-item>
+                    </ion-radio-group>
+                </ion-list>
+                <ion-list>
+                    <ion-list-header>
+                        <ion-label color="success">Camera Position</ion-label>
+                    </ion-list-header>
+                    <ion-radio-group name="auto" value="{{camera_position}}" (ionChange)='set_position($event)'>
+                        <ion-item>
+                            <ion-label>Top</ion-label>
+                            <ion-radio slot="start" color="success" value="4"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>Center</ion-label>
+                            <ion-radio slot="start" color="success" value="2"></ion-radio>
+                        </ion-item>
+                    </ion-radio-group>
+                </ion-list>
+                <ion-list>
+                    <ion-list-header>
+                        <ion-label color="success">Camera Zoom</ion-label>
+                    </ion-list-header>
+                    <ion-radio-group name="auto" value="{{camera_zoom}}">
+                        <ion-item>
+                            <ion-label>100%</ion-label>
+                            <ion-radio (ionFocus)="set_zoom(100)" slot="start" color="success" value="100"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>75%</ion-label>
+                            <ion-radio (ionFocus)="set_zoom(75)" slot="start" color="success" value="75"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>50%</ion-label>
+                            <ion-radio (ionFocus)="set_zoom(50)" slot="start" color="success" value="50"></ion-radio>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>25%</ion-label>
+                            <ion-radio (ionFocus)="set_zoom(25)" slot="start" color="success" value="25"></ion-radio>
+                        </ion-item>
+                    </ion-radio-group>
+                </ion-list>
+
+            </ion-list>
+        </ion-accordion>
+        <!-- <ion-accordion value="shapes">
+            <ion-item slot="header">
+                <ion-list-header>
+                    <ion-title>Image Settings</ion-title>
+                </ion-list-header>
+            </ion-item>
+
+            <ion-list slot="content">
+            </ion-list>
+        </ion-accordion>
+        <ion-accordion>
+            <ion-item slot="header">
+                <ion-list-header>
+                    <ion-title>Other Settings</ion-title>
+                </ion-list-header>
+            </ion-item>
+
+            <ion-list slot="content">
+            </ion-list>
+        </ion-accordion> -->
+    </ion-accordion-group>
+</ion-content>

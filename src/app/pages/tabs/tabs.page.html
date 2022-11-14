@@ -1,0 +1,54 @@
+<ion-tabs>
+    <div *ngIf="backdrop" class="backdrop"></div>
+    <ion-tab-bar style="height: 70px;">
+        <ion-tab-button tab="home">
+            <ion-icon name="home"></ion-icon>
+            <ion-label>Home</ion-label>
+        </ion-tab-button>
+        <ion-tab-button>
+        </ion-tab-button>
+        <ion-tab-button tab="help">
+            <ion-icon name="help-circle"></ion-icon>
+            <ion-label>Help</ion-label>
+        </ion-tab-button>
+    </ion-tab-bar>
+
+</ion-tabs>
+
+
+
+<ion-fab vertical="bottom" horizontal="center">
+    <ion-fab-button (click)="toggle_backdrop()" class="fab_button">
+        <img class="menu_icon_rot" height="30" width="30" src="./../../assets/icon/menu.svg" alt="" srcset="">
+    </ion-fab-button>
+
+
+    <ion-fab-list (click)="clicked_fab(1)" routerLink="/report" side="top" class="top_left_fab">
+        <span>Consistency</span>
+        <span>Color</span>
+        <ion-fab-button>
+            <ion-icon color="light" name="color-palette"></ion-icon>
+        </ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list (click)="clicked_fab(2)" routerLink="/report" side="top" class="top_right_fab">
+        <span>Dimension</span>
+        <span>Fabric</span>
+        <ion-fab-button>
+            <ion-icon color="light" name="prism"></ion-icon>
+        </ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list (click)="clicked_fab(3)" routerLink="/report" side="top" class="bottom_left_fab">
+        <span>Stability</span>
+        <span>Dimensional</span>
+        <ion-fab-button>
+            <ion-icon color="light" name="barbell"></ion-icon>
+        </ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list (click)="clicked_fab(4)" routerLink="/report" side="top" class="bottom_right_fab">
+        <span>Quality</span>
+        <span>Overall</span>
+        <ion-fab-button>
+            <ion-icon color="light" name="dice"></ion-icon>
+        </ion-fab-button>
+    </ion-fab-list>
+</ion-fab>

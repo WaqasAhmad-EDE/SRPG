@@ -1,0 +1,93 @@
+.top_left_fab {
+    right: 90%;
+    bottom: 100%;
+    ion-fab-button {
+        --background: #7c68ee;
+    }
+}
+
+.top_right_fab {
+    left: 90%;
+    bottom: 100%;
+    ion-fab-button {
+        --background: #ffc801;
+    }
+}
+
+.bottom_left_fab {
+    bottom: -110%;
+    right: 200%;
+    ion-fab-button {
+        --background: #f26e55;
+    }
+}
+
+.bottom_right_fab {
+    bottom: -110%;
+    left: 200%;
+    ion-fab-button {
+        --background: #67cb45;
+    }
+}
+
+ion-fab-list {
+    ion-fab-button {
+        --border-radius: 15px;
+        width: 55px;
+        height: 55px;
+        ion-icon {
+            font-size: 32px;
+        }
+    }
+}
+
+ion-content {
+    --background: #101010;
+}
+
+ion-footer {
+    border-top: 1px solid #56575b;
+    background-color: #1e1e1e;
+}
+
+ion-fab-button.fab_button {
+    --border-radius: 5px;
+    --background: #1e1e1e;
+    --border-color: #464646;
+    --border-width: 1px;
+    --border-style: solid;
+}
+
+.backdrop {
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 12;
+}
+
+ion-tab-button {
+    --color-selected: rgb(0, 255, 149);
+}
+
+ion-tab-bar {
+    --background: #1e1e1e;
+}
+
+span {
+    color: white;
+}
+
+// 
+.menu_icon_rot {
+    animation: menu_icon_rot 1s linear;
+}
+
+@keyframes menu_icon_rot {
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1595" height="1600" viewBox="0 0 1595 1600">
+  <g id="Group_1" data-name="Group 1" transform="translate(-373 -280)">
+    <path id="Path_1" data-name="Path 1" d="M175,0H575A175,175,0,0,1,750,175V350H175A175,175,0,0,1,175,0Z" transform="translate(1573 280) rotate(90)" fill="#7c68ee"/>
+    <path id="Rectangle_2" data-name="Rectangle 2" d="M0,0H575A175,175,0,0,1,750,175v0A175,175,0,0,1,575,350H175A175,175,0,0,1,0,175V0A0,0,0,0,1,0,0Z" transform="translate(1218 1130)" fill="#ffc801"/>
+    <path id="Rectangle_3" data-name="Rectangle 3" d="M0,0H575A175,175,0,0,1,750,175v0A175,175,0,0,1,575,350H175A175,175,0,0,1,0,175V0A0,0,0,0,1,0,0Z" transform="translate(1118 1130) rotate(90)" fill="#f26e55"/>
+    <path id="Rectangle_4" data-name="Rectangle 4" d="M175,0H575A175,175,0,0,1,750,175V350a0,0,0,0,1,0,0H175A175,175,0,0,1,0,175v0A175,175,0,0,1,175,0Z" transform="translate(373 680)" fill="#67cb45"/>
+    <rect id="Rectangle_5" data-name="Rectangle 5" width="350" height="350" rx="175" transform="translate(1618 1030) rotate(-90)" fill="#f26e55"/>
+    <rect id="Rectangle_6" data-name="Rectangle 6" width="350" height="350" rx="175" transform="translate(1123 630) rotate(180)" fill="#ffc801"/>
+    <rect id="Rectangle_7" data-name="Rectangle 7" width="344" height="350" rx="172" transform="translate(723 1130) rotate(90)" fill="#7c68ee"/>
+    <rect id="Rectangle_8" data-name="Rectangle 8" width="350" height="350" rx="175" transform="translate(1218 1530)" fill="#67cb45"/>
+  </g>
+</svg>

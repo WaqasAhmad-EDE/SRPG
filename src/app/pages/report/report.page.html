@@ -1,0 +1,117 @@
+<div [hidden]='!captured' class="preview_image">
+    <img src="{{picture}}" alt="">
+</div>
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Report</ion-title>
+
+        <ion-buttons slot="end">
+            <ion-button [disabled]='disable_cards' [hidden]='all_expanded' (click)="expand_contract()">
+                <ion-icon slot="icon-only" name="expand-outline"></ion-icon>
+            </ion-button>
+            <ion-button [disabled]='disable_cards' [hidden]='!all_expanded' (click)="expand_contract()">
+                <ion-icon name="contract-outline" slot="icon-only"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div [hidden]='camera_button_status[0]' class="back_drop"></div>
+
+
+
+
+    <ion-card [disabled]='disable_cards' *ngIf='card_to_show == 1 || card_to_show == 4'>
+        <ion-card-header>
+            <ion-item lines="none" button (click)="toggle_card(1)">
+                <ion-label>Color Consistency</ion-label>
+                <ion-spinner name="crescent" [hidden]="SPCC"></ion-spinner>
+                <ion-icon name="chevron-down-outline" slot="end" [hidden]="full_card[1]"></ion-icon>
+                <ion-icon name="chevron-up-outline" slot="end" [hidden]="!full_card[1]"></ion-icon>
+                <p [hidden]="!PRCC">{{CC}}%</p>
+            </ion-item>
+        </ion-card-header>
+        <ion-card-content [hidden]="!full_card[1]">
+            <ion-label>Orignal Image</ion-label>
+            <ion-label>
+                <ion-img [src]="picture" (click)="expandimage(picture)"></ion-img>
+            </ion-label>
+        </ion-card-content>
+    </ion-card>
+
+
+
+    <ion-card [disabled]='disable_cards' *ngIf='card_to_show == 2 || card_to_show == 4'>
+        <ion-card-header>
+            <ion-item lines="none" button (click)="toggle_card(2)">
+                <ion-label>Fabric Dimensions</ion-label>
+                <ion-spinner name="crescent" [hidden]="SPFD"></ion-spinner>
+                <ion-icon name="chevron-down-outline" slot="end" [hidden]="full_card[2]"></ion-icon>
+                <ion-icon name="chevron-up-outline" slot="end" [hidden]="!full_card[2]"></ion-icon>
+            </ion-item>
+        </ion-card-header>
+        <ion-card-content [hidden]="!full_card[2]">
+            <ion-label>Orignal Image</ion-label>
+            <ion-label>
+                <ion-img [src]="picture" (click)="expandimage(picture)"></ion-img>
+            </ion-label>
+            <ion-label>Pattern Image</ion-label>
+            <ion-label>
+                <ion-img [src]="FDImage" (click)="expandimage(FDImage)"></ion-img>
+            </ion-label>
+        </ion-card-content>
+    </ion-card>
+
+
+
+    <ion-card [disabled]='disable_cards' *ngIf='card_to_show == 3 || card_to_show == 4'>
+        <ion-card-header>
+            <ion-item lines="none" button (click)="toggle_card(3)">
+                <ion-label>Dimensional stability</ion-label>
+                <ion-spinner name="crescent" [hidden]="SPDS"></ion-spinner>
+                <ion-icon name="chevron-down-outline" slot="end" [hidden]="full_card[3]"></ion-icon>
+                <ion-icon name="chevron-up-outline" slot="end" [hidden]="!full_card[3]"></ion-icon>
+                <p [hidden]="!PRDS">{{DS}}%</p>
+            </ion-item>
+        </ion-card-header>
+        <ion-card-content [hidden]="!full_card[3]">
+            <ion-label>Orignal Image</ion-label>
+            <ion-label>
+                <ion-img [src]="picture" (click)="expandimage(picture)"></ion-img>
+            </ion-label>
+        </ion-card-content>
+    </ion-card>
+
+
+
+    <ion-fab *ngIf="camera_button_status[0] == true" vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="open_camera()" color="success">
+            <ion-icon name="camera"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+    <ion-fab *ngIf="camera_button_status[1] == true" vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="close_camera()" color="danger">
+            <ion-icon name="close-outline"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+    <ion-fab *ngIf="camera_button_status[2] == true" vertical="bottom" horizontal="start" slot="fixed">
+        <ion-fab-button (click)="reset_image()" color="medium">
+            <ion-icon name="refresh-outline"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+    <ion-fab *ngIf="camera_button_status[3] == true" vertical="bottom" horizontal="center" slot="fixed">
+        <ion-fab-button (click)="accept_image()" color="success">
+            <ion-icon name="checkmark-outline"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+    <ion-fab *ngIf="camera_button_status[4] == true" vertical="bottom" horizontal="center" slot="fixed">
+        <ion-fab-button (click)="take_photo()" color="primary">
+            <ion-icon name="camera"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+</ion-content>
