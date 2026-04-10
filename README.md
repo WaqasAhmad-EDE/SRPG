@@ -8,7 +8,7 @@ The app is intended for use on Capacitor-enabled mobile devices and includes a s
 
 ## Live Testing
 
-A hosted live demo is available at: https://srpg-4cd35.web.app/tabs/home
+A hosted live demo is available at: <a href="https://srpg-4cd35.web.app/tabs/home" target="_blank" rel="noopener noreferrer">https://srpg-4cd35.web.app/tabs/home</a>
 
 
 ## What the Project Does
