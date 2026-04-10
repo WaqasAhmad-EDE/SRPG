@@ -6,6 +6,11 @@ This repository contains an Ionic + Angular mobile application called **Automati
 
 The app is intended for use on Capacitor-enabled mobile devices and includes a simplified workflow for selecting a fabric test, capturing an image, and viewing results. It is especially focused on the practical inspection of woven fabric characteristics like color consistency, dimensional stability, and fabric dimensions.
 
+## Live Testing
+
+A hosted live demo is available at: https://srpg-4cd35.web.app/tabs/home
+
+
 ## What the Project Does
 
 - Provides a mobile interface for fabric quality inspection.
